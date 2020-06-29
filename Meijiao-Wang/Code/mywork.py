@@ -18,8 +18,7 @@ def comulation(col):
     combine.groupby([col,'target'])['target'].count()
     combine[[col,'target']].groupby(['target']).mean().plot.bar()
     title = 'Overdue vs '+ col
-    plt.title(title)
-    plt.xlabel(['Not overdue', 'Overdue'])
+    plt.xlabel(['target'])
     plt.show()
 
 # 'Education_Info1','Education_Info5' overdue information
@@ -61,5 +60,3 @@ for x, y in enumerate(list(miss_analy.missRate.values)):
 plt.ylim([0, 1.2])
 
 plt.show()
-
-
